@@ -133,19 +133,19 @@ namespace ProblemSolving
 
             // Create an array of size 256 and 
             // fill count of every character in it 
-            int[] count = new int[noOfChars];
-            count = FillCharCounts(str, count);
+            int[] charsWithCount = new int[noOfChars];
+            charsWithCount = FillCharCounts(str, charsWithCount);
 
             for (int i = 0; i < noOfChars; i++)
             {
                 // for printing duplicate chars
-                //if (count[i] > 1)
+                //if (charsWithCount[i] > 1)
                 //{
-                //    Console.WriteLine((char)i + ", " + "count = " + count[i]);
+                //    Console.WriteLine((char)i + ", " + "count = " + charsWithCount[i]);
                 //}
 
                 //for printing uniq chars
-                if (count[i] != 0)
+                if (charsWithCount[i] != 0)
                 {
                     Console.WriteLine((char)i + ",");
                 }
@@ -165,7 +165,8 @@ namespace ProblemSolving
         {
             for (int i = 0; i < str.Length; i++)
             {
-                // ex: str[i] = 'A' then  Asci value for 'A' is 65. key in count array is 65 value is 0 when it increments it is going to be 1
+                // ex: str[i] = 'A' then  Asci value for 'A' is 65. 
+                // Initially for the Asci value 65, count is 0 when it increments it is going to be 1
                 count[str[i]]++;
             }
             return count;

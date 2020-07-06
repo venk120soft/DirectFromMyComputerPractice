@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ProblemSolving
 {
+    /// <summary>
+    /// Two Number Sum Problem Statement
+    /// Given an array of integers, return the indices of the two numbers whose sum is equal to a given target.
+    /// </summary>
     class TwoSum
     {
         /// <summary>
@@ -33,17 +36,17 @@ namespace ProblemSolving
                 //}
                 //dict[target-nums[i]] = i;
 
-                // Other solution can be
+                //// Other solution can be
                 //try
                 //{
-                //    int component= target- nums[i];
-                ////    If the key is not found it will throw an error
-                //    var s = dict[component];
-                //    return new int[] {i, dict[component] };
+                //    int component = target - nums[i];
+                //    If the key is not found it will throw an error
+                //var s = dict[component];
+                //    return new int[] { i, dict[component] };
                 //}
                 //catch (Exception e)
                 //{
-                //// logging the errors
+                //    logging the errors
                 //    Console.WriteLine(e.Message);
                 //}
                 //dict[nums[i]] = i;
@@ -63,7 +66,6 @@ namespace ProblemSolving
             // sort the array
             // take 2 pointers
             int start = 0; int end = nums.Length - 1;
-            // If sorted array sorting here is not required
             Array.Sort(nums);
             while (start != end)
             {
@@ -90,9 +92,10 @@ namespace ProblemSolving
             for (int i = 0; i < nums.Length; i++)
             {
                 int remaining = target - nums[i];
-                if (Array.IndexOf(nums, remaining) != -1 && Array.IndexOf(nums, remaining) != i)
+                int index = Array.IndexOf(nums, remaining);
+                if (index != -1 && index != i)
                 {
-                    return new int[] { i, Array.IndexOf(nums, remaining) };
+                    return new int[] { i, index };
                 }
             }
             return null;
