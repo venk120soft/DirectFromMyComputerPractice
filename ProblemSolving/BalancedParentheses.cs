@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 /*
  * By looping throw each character of the string, checking for the existance 
@@ -43,5 +44,13 @@ namespace ProblemSolving
 
             return stack.Count == 0;
         }
+
+        //public static void Main(string[] args)
+        //{
+        //    string input = "({[]})";
+        //    BalancedParentheses balancedParentheses = new BalancedParentheses();
+        //    bool isBalanced= balancedParentheses.isBalanced(input);
+        //    Console.WriteLine("isBalanced: ", isBalanced);
+        //}
     }
 }

@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace ProblemSolving
 {
+    /// <summary>
+    /// In a given string search for the substring
+    /// </summary>
     class CrawlerSearch
     {
         /// <summary>
         /// Get the List of items with the count of it
+        /// This is an assignment given to me
         /// </summary>
         /// <param name="givenArray"></param>
         /// <returns></returns>
@@ -26,7 +30,7 @@ namespace ProblemSolving
                 }
                 else
                 {
-                    // If the element (key) is already there then increasing the value count with 1
+                    // If the element (key) is exist then increasing the count with 1
                     temp[givenArray[i]] += 1;
                 }
             }
@@ -63,5 +67,37 @@ namespace ProblemSolving
                 Console.WriteLine(item.Key + " No Of Occurances:" + item.Value);
             }
         }
+
+        private string[] getArrayOfStrings()
+        {
+            Console.WriteLine("Enter the , seperted string to exclude from search:");
+            string excludeString = Console.ReadLine();
+            return excludeString.Split(',');
+        }
+
+        //public static void Main(string[] args)
+        //{
+        //    // CrawlSearch
+        //    CrawlerSearch crawlerSearch = new CrawlerSearch();
+        //    Console.WriteLine("Once Enter the text that you want to do Search In press y to accept the string");
+        //    List<string> lines = new List<string>();
+        //    string givenString;
+        //    while ((givenString = Console.ReadLine()) != null)
+        //    {
+        //        if (givenString.ToLower() == "y")
+        //        {
+        //            break;
+        //        }
+        //        // Either you do here something with each line separately or
+        //        lines.Add(givenString);
+        //    }
+        //    givenString = string.Join(",", lines.ToArray());
+
+        //    var excludeStrings = crawlerSearch.getArrayOfStrings();
+        //    Console.WriteLine("Enter the count of values to print");
+        //    var printCount = Console.ReadLine();
+        //    crawlerSearch.PrintResult(givenString, excludeStrings, int.Parse(printCount));
+        //    Console.ReadLine();
+        //}
     }
 }

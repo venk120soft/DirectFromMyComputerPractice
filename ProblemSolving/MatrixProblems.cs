@@ -167,7 +167,7 @@ namespace ProblemSolving
                     // Incrementingg the length
                     l = l + 1;
                 }
-                Console.WriteLine("column:{0}, endColumn:{1}, row :{2},endRow:{3}", l,endOfColumn,k,endOfRow);
+                Console.WriteLine("column:{0}, endColumn:{1}, row :{2},endRow:{3}", l, endOfColumn, k, endOfRow);
             }
         }
         public static void spiralPrint(int rows, int columns, int[,] a)
@@ -221,5 +221,21 @@ namespace ProblemSolving
                 }
             }
         }
+
+        //public static void Main(string[] args)
+        //{
+        //    MatrixProblems matrixProblems = new MatrixProblems();
+        //    int[,] givenMatrix = new int[,]
+        //    {
+        //        {1,2,3,1 },
+        //        {4,5,6,4 },
+        //        {7,8,9,7 }
+        //    };
+        //    //matrixProblems.PrintPrincipleDiagonalElements(givenMatrix,3,3);
+        //    //matrixProblems.PrintAllDiagonalElements0(givenMatrix, 3, 3);
+        //    matrixProblems.PrintSpiralElements(givenMatrix, 3, 4);
+        //    MatrixProblems.spiralPrint(3, 4, givenMatrix);
+        //    Console.Read();
+        //}
     }
 }

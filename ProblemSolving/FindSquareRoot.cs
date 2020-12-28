@@ -21,5 +21,13 @@ namespace ProblemSolving
             }
             return 0.00;
         }
+
+        //public static void Main(string[] args)
+        //{
+        //    FindSquareRoot findSquareRoot = new FindSquareRoot();
+        //    float input = 255;
+        //    double result = findSquareRoot.FindSquareRootValue(input);
+        //    Console.WriteLine($"Square Root value of {input} is:" + result);
+        //}
     }
 }
