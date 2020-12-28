@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
+/*
+ * By looping throw each character of the string, checking for the existance 
+ */
 namespace ProblemSolving
 {
-    class BalancingBrackets
+    /// <summary>
+    /// Checking for valid parathesis in given string
+    /// </summary>
+    class BalancedParentheses
     {
-        // Ex: {(}}
         public bool isBalanced(string givenString)
         {
             // HashMap is not there in C#
@@ -23,11 +24,11 @@ namespace ProblemSolving
             for (int i = 0; i < givenString.Length; i++)
             {
                 char c = givenString[i];
-
                 // if the current character (closed paranthesis) is preesnt as key in the dictionary then
                 if (hashMap.ContainsKey(c))
                 {
                     char temp = stack.Pop();
+                    // if (temp != hashMap.GetValueOrDefault(c))
                     if (temp != hashMap[c])
                     {
                         return false;
@@ -42,19 +43,5 @@ namespace ProblemSolving
 
             return stack.Count == 0;
         }
-
-        //static void Main(string[] args)
-        //{
-        //    var watch = new System.Diagnostics.Stopwatch();
-        //    watch.Start();
-        //    BalancingBrackets balancingBrackets = new BalancingBrackets();
-        //    var flag = balancingBrackets.isBalanced("{()}");
-        //    Console.WriteLine("Is Balanced: {0}", flag);
-        //    Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
-        //    watch.Stop();
-
-        //    Console.ReadLine();
-        //}
-
     }
 }

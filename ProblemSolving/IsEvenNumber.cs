@@ -64,13 +64,13 @@ namespace ProblemSolving
             return steps;
         }
 
-        static void Main(string[] args)
-        {
-            IsEvenNumber isEven = new IsEvenNumber();
-            int number = int.Parse(Console.ReadLine());
-            int count = isEven.NumberOfSteps(number);
-            Console.WriteLine("No of steps are: {0} ", count);
-            Console.ReadLine();
-        }
+        //static void Main(string[] args)
+        //{
+        //    IsEvenNumber isEven = new IsEvenNumber();
+        //    int number = int.Parse(Console.ReadLine());
+        //    int count = isEven.NumberOfSteps(number);
+        //    Console.WriteLine("No of steps are: {0} ", count);
+        //    Console.ReadLine();
+        //}
     }
 }
