@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrawlerSearch.cs" />
     <Compile Include="FindDuplicates.cs" />
     <Compile Include="FindSquareRoot.cs" />
+    <Compile Include="IsEvenNumber.cs" />
     <Compile Include="MatrixProblems.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
