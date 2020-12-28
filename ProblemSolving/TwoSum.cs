@@ -11,6 +11,7 @@ namespace ProblemSolving
     {
         /// <summary>
         /// Best solution with O(n) time and O(n) space complexity
+        /// target - element =
         /// </summary>
         /// <param name="nums"></param>
         /// <param name="target"></param>
@@ -41,7 +42,7 @@ namespace ProblemSolving
                 //{
                 //    int component = target - nums[i];
                 //    If the key is not found it will throw an error
-                //var s = dict[component];
+                //    var s = dict[component];
                 //    return new int[] { i, dict[component] };
                 //}
                 //catch (Exception e)
@@ -66,6 +67,7 @@ namespace ProblemSolving
             // sort the array
             // take 2 pointers
             int start = 0; int end = nums.Length - 1;
+            // If sorted array sorting here is not required
             Array.Sort(nums);
             while (start != end)
             {
@@ -86,9 +88,9 @@ namespace ProblemSolving
             return null;
         }
 
+        // You can use this one also O(n2) because when you do IndexOf it go throw all elements
         public int[] TwoSum2(int[] nums, int target)
         {
-            // You can use this one also O(n2) because when you do IndexOf it go throw all elements
             for (int i = 0; i < nums.Length; i++)
             {
                 int remaining = target - nums[i];
@@ -101,10 +103,10 @@ namespace ProblemSolving
             return null;
         }
 
+        // Algorithm for Bruit force: O(n2)
+        // Compare Every Item with Other element skip comparing once the match found
         public int[] TwoSum3(int[] nums, int target)
         {
-            // Algorithm for Bruit force: O(n2)
-            // Compare Every Item with Other element skip comparing once the match found
             for (int i = 0; i < nums.Length; i++)
             {
                 for (int j = i; i < nums.Length; j++)
