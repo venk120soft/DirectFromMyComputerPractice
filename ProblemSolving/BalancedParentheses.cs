@@ -44,6 +44,42 @@ namespace ProblemSolving
 
             return stack.Count == 0;
         }
+        
+        /*
+        // Javascript
+        public isBalancedJS(givenString:string):bool
+        {
+            // HashMap is not there in C#
+            const hashMap = {};
+            hashMap['}'] = '{';
+            hashMap[')'] = '(';
+            hashMap[']'] = '[';
+
+            const stack = [];
+
+            // looping throw each element
+            for (let i = 0; i < givenString.length; i++)
+            {
+                const c = givenString[i];
+                // if the current character (closed paranthesis) is preesnt as key in the dictionary then
+                if (hashMap.hasOwnProperty(c))
+                {
+                    const temp = stack.pop();
+                    if (temp != hashMap[c])
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    // if the character is not in the key it may be open paranthesis 
+                    stack.push(c);
+                }
+            }
+
+            return stack.length == 0;
+        }
+        */
 
         //public static void Main(string[] args)
         //{
